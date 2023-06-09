@@ -22,7 +22,7 @@ const NavBer = () => {
         <Link to="/classes">Classes</Link>
       </li>
       <li>
-        <Link to="/dashboard/adminHome">Dashboard</Link>
+        <Link to="/dashboard">Dashboard</Link>
       </li>
 
       <li>

@@ -5,6 +5,10 @@ import Instructors from "../Page/Instructors/Instructors";
 import Login from "../Page/Login/Login";
 import SignUp from "../Page/SignUp/SignUp";
 import Classes from "../Page/Classes/Classes";
+import PrivetRoute from "./PrivetRoute";
+import DashBoard from "../LayOut/DashBoard/DashBoard";
+import AdminHome from "../Page/DashBord/AdminHome/AdminHome";
+import MySelectedClasses from "../Page/DashBord/MySelectedClasses/MySelectedClasses";
 
 const router = createBrowserRouter([
   {
@@ -33,6 +37,16 @@ const router = createBrowserRouter([
         }
     ]
   },
+  {
+    path:'dashboard',
+    element:<PrivetRoute><DashBoard></DashBoard></PrivetRoute>,
+    children:[
+      {
+        path:'mySelectedClass',
+        element:<MySelectedClasses></MySelectedClasses>
+      }
+    ]
+  }
 ]);
 
 export default router;
